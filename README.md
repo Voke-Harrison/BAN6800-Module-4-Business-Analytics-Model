@@ -15,8 +15,8 @@ The solution is developed in Python using Jupyter Notebooks, with models includi
 ---
 ### GitHub Repository content
 - The Cleaned Dataset - telco_churn_cleaned.csv
-- Taco-Tel's Churn Prediction Model - Taco-Tel Churn Prediction Model.pynb
-- Previously Submited Taco-Tel's Exploratory Notebook - Taco-Tel Churn Prediction Data Exploration.pynb
+- Taco-Tel's Churn Prediction Model - Taco-Tel Churn Prediction Model.ipynb
+- Previously Submited Taco-Tel's Exploratory Notebook - Taco-Tel Churn Prediction Data Exploration.ipynb
   
 ---
 ### Dataset Overview
