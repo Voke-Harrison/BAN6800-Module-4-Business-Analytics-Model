@@ -17,11 +17,11 @@ The solution is developed in Python using Jupyter Notebooks, with models includi
 
 The dataset contains customer demographics, account information, service usage, and churn status. It includes the following key columns (among others):
 
-- `Customer ID`, `Country`, `State`, `City`, `Zip Code`
-- `Gender`, `Partner`, `Dependents`, `Tenure Months`
-- `Internet Service`, `Tech Support`, `Streaming TV`, `Device Protection`
-- `Monthly Charges`, `Total Charges`, `Total Revenue`, `CLTV`
-- `Churn Label`, `Churn Value`, `Churn Reason`, `Customer Status`
+- Customer ID, Country, State, City, Zip Code
+- Gender, Partner, Dependents, Tenure Months
+- Internet Service, Tech Support, Streaming TV, Device Protection
+- Monthly Charges, Total Charges, Total Revenue, CLTV
+- Churn Label, Churn Value, Churn Reason, Customer Status
 - One-hot encoded variables for contracts, offers, internet type, and payment methods
 
 Total Columns (after cleaning): **~67**
@@ -31,17 +31,11 @@ Total Columns (after cleaning): **~67**
 
 #### 1. Data Cleaning & Preprocessing
 - Removed duplicate columns
-- Dropped irrelevant columns (e.g., `Customer ID`)
-- Converted numeric fields (e.g., `Total Charges`) from string to float
-- Label-encoded categorical features using `LabelEncoder`
+- Dropped irrelevant columns (e.g., Customer ID)
+- Converted numeric fields (e.g., Total Charges) from string to float
+- Label-encoded categorical features using LabelEncoder
 - One-hot encoding applied to variables like contract type and payment method
-- Scaled features using `StandardScaler` for models sensitive to feature magnitude
-
-#### 2. Exploratory Data Analysis
-- Visualized churn distribution
-- Examined correlations
-- Identified potential target leakage
-- Analyzed service patterns and their relationship to churn
+- Scaled features using StandardScaler for models sensitive to feature magnitude
 
 #### 3. Model Development
 Models trained using a 80/20 train-test split with stratification:
@@ -49,23 +43,13 @@ Models trained using a 80/20 train-test split with stratification:
 - **Decision Tree**
 - **Random Forest**
 - **Gradient Boosted Decision Trees**
-- **Neural Network (Keras with ReLU and dropout layers)**
+- **Multilayer Perceptron (MLP) - Neural Network (Keras with ReLU and dropout layers)**
 
 Model Evaluation Metrics:
 - **F1 Score (macro)**
 - **Recall Score (macro)**
 - **AUC-ROC**
 - **Confusion Matrix**
-
-#### 4. Target Leakage Detection and Correction
-Initial models performed with unusually high accuracy (F1 = 1.0), indicating **target leakage**. After thorough review, features like `Churn Label`, `Churn Reason`, and highly correlated engineered fields were removed. Models were re-evaluated.
-
-#### 5. Neural Network Integration
-- Built using **Keras Sequential API**
-- Architecture: 3 dense layers + dropout
-- Final output layer with sigmoid activation
-- Trained with `binary_crossentropy` loss and `Adam` optimizer
-- Predictions thresholded at 0.5
 
 ---
 
@@ -95,7 +79,7 @@ Initial models performed with unusually high accuracy (F1 = 1.0), indicating **t
 
 | Criterion               | Description |
 |------------------------|-------------|
-| **F1 Score ≥ 0.93**    | Strong balance between precision and recall |
+| **F1 Score ≥ 0.90**    | Strong balance between precision and recall |
 | **Recall ≥ 0.90**      | Captures at-risk customers with high accuracy |
 | **AUC ≥ 0.90**         | Confident probability-based predictions |
 | **Interpretability**   | GBDT preferred for feature importance transparency |
