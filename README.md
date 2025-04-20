@@ -1,5 +1,5 @@
 # BAN6800-Module-4-Business-Analytics-Model
-# Shield360 Project - Customer Churn Prediction
+# Shield360 Project - Customer Churn Prediction Model
 ---
 ### Project Objective
 
