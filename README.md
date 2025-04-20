@@ -10,8 +10,14 @@ The solution is developed in Python using Jupyter Notebooks, with models includi
 - Decision Tree
 - Random Forest
 - Gradient Boosted Decision Trees (GBDT)
-- Neural Network (Keras)
-
+- Multilayer Perceptron (MLP) - Neural Network
+- 
+---
+### GitHub Repository content
+- The Cleaned Dataset - telco_churn_cleaned.csv
+- Taco-Tel's Churn Prediction Model - Taco-Tel Churn Prediction Model.pynb
+- Previously Submited Taco-Tel's Exploratory Notebook - Taco-Tel Churn Prediction Data Exploration.pynb
+  
 ---
 ### Dataset Overview
 
@@ -24,7 +30,7 @@ The dataset contains customer demographics, account information, service usage, 
 - Churn Label, Churn Value, Churn Reason, Customer Status
 - One-hot encoded variables for contracts, offers, internet type, and payment methods
 
-Total Columns (after cleaning): **~67**
+Total Columns (after cleaning): **67**
 
 ---
 ### Project Steps
